@@ -1,30 +1,9 @@
 ### 花滑项目
 
+主要解决：分辨F跳和Lz跳，两种在花滑中难以分辨的跳跃动作
 
-Aquamarine is a very light linux rendering backend library. It provides basic abstractions
-for an application to render on a Wayland session (in a window) or a native DRM session.
-
-It is agnostic of the rendering API (Vulkan/OpenGL) and designed to be lightweight, performant, and
-minimal.
-
-Aquamarine provides no bindings for other languages. It is C++-only.
-
-
-
-## Stability
-
-Aquamarine depends on the ABI stability of the stdlib implementation of your compiler. Sover bumps will be done only for aquamarine ABI breaks, not stdlib.
-
-## Building
-
-```sh
-cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr -S . -B ./build
-cmake --build ./build --config Release --target all -j`nproc 2>/dev/null || getconf _NPROCESSORS_CONF`
-```
-
-## TODOs
-
- - [x] Wayland backend
- - [x] DRM backend (DRM / KMS / libinput)
- - [x] Virtual backend (aka. Headless)
- - [ ] Hardware plane support
+  目前都是基于规则的，以地面和落地脚之间的夹角，进行分辨
+  其中还有进行画面画质检测的代码 " hz_pd.py "
+  如果想运行该代码需要将 " test.py "文件中的路径修改为需要判断的文件路径，接着点击运行即可
+  
+  以上就是截止目前10月20日的工作
