@@ -2,7 +2,7 @@ import time
 from analysis_v4 import Analysis
 
 if __name__ == "__main__":
-    root_dir = "C:/Users/ChiaShengRong/Desktop/个人/花滑/代码"
+    root_dir = "C:\\Users\\khaw\\Desktop\\花滑视频\\Senior Women - SP1\\C0056"
 
     ja = Analysis(root_dir)
 
